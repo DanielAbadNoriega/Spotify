@@ -1,0 +1,25 @@
+html {
+  --primary-10: #0a807e;
+  --primary-9: #1fc3c0;
+  --primary-8: #2ed4d2;
+  --primary-7: #42e2df;
+  --primary-6: #5cecea;
+  --primary-5: #7df4f2;
+  --primary-4: #a5f9f8;
+  --primary-3: #d1fdfc;
+  --primary-2: #e8fefe;
+  --primary-1: #ffffff;
+
+  --secondary-10: #2d2d2d;
+  --secondary-9: #373737;
+  --secondary-8: #404040;
+  --secondary-7: #4c4c4c;
+  --secondary-6: #5d5d5d;
+  --secondary-5: #747474;
+  --secondary-4: #909090;
+  --secondary-3: #b2b2b2;
+  --secondary-2: #d8d8d8;
+  --secondary-1: #ffffff;
+
+  --primary: #1ed760;
+}

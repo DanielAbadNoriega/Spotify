@@ -1,0 +1,54 @@
+html {
+  /* Familias tipográficas */
+  --font-h1: OpenSans-ExtraBold, sans-serif;
+  --font-1:  OpenSans-Bold, sans-serif;
+  --font-html: Anthony-Hartman-Italic, "La Belle Aurore";
+
+  /* Variables tipográficas */
+  --text-caption: 14px;
+  --text-note: 16px;
+  --text-base: 20px;
+  --text-subheader: 24px;
+  --text-title: 48px;
+  --text-headline: 72px;
+  --text-display: 96px;
+  --text-jumbo: 144px;
+}
+
+@media (min-width: 1400px) {
+  html {
+    /* Variables tipográficas */
+    --text-base: 24px; /* <p> */
+    --text-headline: 60px; /* <h2> */
+    --text-display: 94px; /* <h1> */
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  html{
+    --text-headline: 56px; /* <h2> */
+    --text-display: 68px;
+  }
+}
+
+@media (max-width: 850px) {
+  html {
+    /* Variables tipográficas */
+    --text-headline: 48px; /* <h2> */
+    --text-display: 56px; /* <h1> */
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    /* Variables tipográficas */
+    --text-caption: 12px;
+    --text-note: 16px; /* etiquetas */
+    --text-base: 18px; /* <p> */
+    --text-subheader: 20px; /* <nav> */
+    --text-title: 26px;
+    --text-headline: 30px; /* <h2> */
+    --text-display: 40px; /* <h1> */
+    --text-jumbo: 50px;
+  }
+}

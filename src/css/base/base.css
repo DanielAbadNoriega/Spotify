@@ -1,0 +1,8 @@
+body {
+  background-color: #121212;
+  color: var(--primary);
+}
+
+/* 
+CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif),sans-serif
+*/

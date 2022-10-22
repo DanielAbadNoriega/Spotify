@@ -1,0 +1,54 @@
+.nav-sp {
+  background-color: black;
+  color: var(--primary-3);
+  position: absolute;
+  top: 0;
+  min-width: 4%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  align-content: center;
+}
+
+.nav-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0 3%;
+  text-align: center;
+}
+
+.nav-list li{
+  min-height: 50px;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.nav-list li a {
+  color: var(--secondary-3);
+  text-decoration: none;
+  position: relative;
+  top: 1.5vh;
+}
+
+.nav-home:hover{
+  width: 100px;
+}
+
+.nav-home a:hover,
+.nav-artist a:hover,
+.nav-music a:hover,
+.nav-login a:hover {
+  color: var(--primary);
+}
+
+.fa-spotify {
+  color: var(--primary);
+  min-width: 50px;
+  min-height: 50px;
+  margin-bottom: 2rem;
+  position: relative;
+  top: 2%;
+  left: 2%;
+}
+
