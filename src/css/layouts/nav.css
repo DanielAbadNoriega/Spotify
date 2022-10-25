@@ -8,6 +8,7 @@
   margin: 0;
   text-align: center;
   align-content: center;
+  background-attachment:local;
 }
 
 .nav-list {
