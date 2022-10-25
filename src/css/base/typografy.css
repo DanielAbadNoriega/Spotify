@@ -4,5 +4,7 @@ h1{
   font-size: var(--text-jumbo);
 }
 
-
+h2{
+  font-size: var(--text-headline);
+}
 /* Escala tipográfica */

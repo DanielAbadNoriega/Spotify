@@ -7,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/css/main.css">
   <script src="./src/lib/fontawesome/js/all.js"></script>
+  <script src="./src/js/components/categories.js"></script>
   <script src="./src/js/spotify-api/SpotifyApp.js"></script>
+  <script src="./src/js/components/home.js"></script>
   <title>Spotify DAN</title>
 </head>
 
-<body>
+<body onload="init()">
   <nav class="nav-sp">
     <i class="fa-brands fa-spotify"></i>
     <ul class="nav-list">
@@ -23,6 +25,10 @@
   </nav>
   <main>
     <h1>Spotify</h1>
+    <h2>Categories</h2>
+    <section class="categories-section" id="categories">
+      <button id="more-categories" onclick="location.href='components/categories.html'">...</button>
+    </section>
   </main>
 </body>
 
