@@ -1,0 +1,26 @@
+.home-container-playlists{
+  display: flex;
+  align-items: center;
+}
+
+#home-playlists{
+  margin: 0;
+  margin-left: 6vw;
+  bottom: 0;
+}
+
+.playlist-description{
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 20vw;
+  height: 75vh;
+  text-align: center;
+}
+
+.playlist-description img {
+  margin: 10px;
+  border-radius: 16px;
+  width: 275px;
+  height: 275px;
+}

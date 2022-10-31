@@ -1,9 +1,10 @@
 const SPOTIFY_URL = "https://api.spotify.com/v1/";
+const token =
+  "BQAbx0O3xMs587J3XQLhKzSDrPUipqKYYQxeRaOkzNWykks12-Dzw_PZk0UeUPGIRdtECRt-D4jwzhrCkTzzroZTDd_v_DgI0MaUJs0Y7kweesFpaAOWekbrDQQVkP_EgUda8vHWS0BOpDWYeQMKBHlKweANX65rYTT2HAsvpg7IT4JzVURaCsqCfpR9MjuG5JQ2Ag";
 const options = {
   method: "GET",
   headers: {
-    Authorization:
-      "Bearer BQC1-UCuuWYDV8Q3Yo16upsJwtUaj1tQmvmO07GSHPf-Au-K8e8HNtRUa4GttMWxKmvj_TNkjhOb3gCegZw5ARYkk_bA3jztkxcM60kG2TMvnUyC5tWvw2kofObXWnAb75-TSYo4iQLN6gi0fzC808Utm5p0_2_v4AaonDhIGzZIgi1cR5IGsGmD6t0h8NKg-taY5Q",
+    Authorization: `Bearer ${token}`,
     Accept: "application/json",
     "Content-Type": "application/json",
   },
@@ -57,5 +58,14 @@ function getPlaylists() {
     })
     .catch((error) =>
       console.log(`[getPlaylists] Error petición  ${error.message}`)
+    );
+}
+
+function playlistTracks(id) {
+  const tracks = getData(`playlists/${id}/tracks`);
+  tracks
+    .then((data) => console.log(data))
+    .catch((error) =>
+      console.log(`[playlistTracks] Error petición  ${error.message}`)
     );
 }

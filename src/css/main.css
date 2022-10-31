@@ -7,6 +7,13 @@
 @import url("./layouts/nav.css");
 @import url("./layouts/home.css");
 
+/* sections */
+@import url("./sections/section.css");
+@import url("./sections/playlists-section.css");
+
+/* articles */
+@import url("./articles/playlists-article.css");
+
 /* Variables */
 @import url("./variables/v-colors.css");
 @import url("./variables/v-spacer.css");

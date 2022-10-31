@@ -26,19 +26,33 @@
   </nav>
   <main>
     <h1>Spotify</h1>
+
+    <!-- Categories -->
     <section class="section" id="home-categories">
       <h2>Categories</h2>
       <div class="container container-categories">
       </div>
-      <button id="more" class="more-categories" onclick="location.href='components/categories.html'">...</button>
+      <button id="more" class="more-categories"
+        onclick="location.href='components/categories.html'">...</button>
     </section>
 
-    <section class="section" id="home-playlists">
-      <h2>Playlists</h2>
-      <div class="container container-playlists">
-      </div>
-      <button id="more"  class="more-playlists" onclick="location.href='components/playlists.html'">...</button>
-    </section>
+    <!-- Playlists -->
+    <div class="home-container-playlists">
+      <section class="section" id="home-playlists">
+        <h2>Playlists</h2>
+        <div class="container container-playlists">
+        </div>
+        <button id="more" class="more-playlists"
+        onclick="location.href='components/playlists.html'">...</button>
+      </section>
+      <article class="playlist-description">
+        <h3></h3>
+        <img>
+        <p></p>
+<!--         <button>Listen</button> -->
+        <a target="_blank">Listen me</a>
+      </article>
+    </div>
   </main>
 </body>
 
