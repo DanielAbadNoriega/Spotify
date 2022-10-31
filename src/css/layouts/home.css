@@ -1,29 +1,58 @@
-h1{
+h1 {
   position: relative;
   width: fit-content;
   margin: 0;
   margin-left: 10%;
+  background: linear-gradient(
+    to left top,
+    #e6e6e6,
+    #dee3ef,
+    #cbe3f6,
+    #b1e5f8,
+    #97e7ef,
+    #8ce9ea,
+    #84ebe3,
+    #7fecd9,
+    #79f0df,
+    #71f4e4,
+    #69f7eb,
+    #5ffbf1
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-h2{
-  position: relative;
+h2 {
+  margin: 1vh 2vw;
   width: fit-content;
-  margin: 5vh 0;
-  margin-left: 10%;
   color: var(--secondary-1);
 }
 
-.categories-section{
+.categories-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.6px);
+  -webkit-backdrop-filter: blur(1.6px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
   height: 100%;
-  width: 90%;
+  padding: 5px;
   position: relative;
-  margin: 0;
-  margin-left: 7.5%;
-  display: flex;
-  flex-wrap: wrap;
+  top: 1vh;
+  left: 6vw;
+  width: 92vw;
+  text-align: center;
 }
 
-.categories-section div{
+.container-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-categories div {
+  border-radius: 8px;
   height: 275px;
   width: 275px;
   background-repeat: no-repeat;
@@ -32,22 +61,29 @@ h2{
   margin: 5px;
 }
 
-.categories-section div:hover{
+.container-categories div:hover {
   background-color: white;
   opacity: 0.5;
 }
 
-#more-categories{
+#more-categories {
   border-color: transparent;
-  padding: 0;
   border-width: 0;
   border-style: none;
   height: 52px;
   width: 80px;
+  padding: 0;
+  margin: 5px;
   border-radius: 10px;
   background-color: var(--secondary--9);
-  background-image: linear-gradient(to right top, #1ed760, #4de17b, #6eec95, #8bf6ae, #a7ffc6);
-  order:1;
+  background-image: linear-gradient(
+    to right top,
+    #1ed760,
+    #4de17b,
+    #6eec95,
+    #8bf6ae,
+    #a7ffc6
+  );
+  order: 1;
   color: var(--secondary-10);
 }
-

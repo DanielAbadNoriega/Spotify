@@ -16,7 +16,7 @@ function drawCategories(data) {
 
 function cardCategory(category) {
   let name = category.name.split(" ").join("");
-  let categories = document.getElementsByClassName("categories-section")[0];
+  let categories = document.getElementsByClassName("container-categories")[0];
   let card = document.createElement("div");
 /*   card.addEventListener("click", getCategory(category.id)); */
   card.setAttribute("onclick", `getCategory('${category.id}')`);

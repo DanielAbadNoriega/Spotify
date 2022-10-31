@@ -1,13 +1,18 @@
 /* Nav CSS */
 
 .nav-sp {
-  background-color: black;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.6px);
+  -webkit-backdrop-filter: blur(1.6px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
   color: var(--primary-3);
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 1vw;
+  top: 1vh;
   min-width: 55px;
-  height: 100vh;
+  height: 98vh;
   margin: 0;
   text-align: center;
   align-content: center;
