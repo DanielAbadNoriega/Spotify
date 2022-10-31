@@ -3,7 +3,7 @@ const options = {
   method: "GET",
   headers: {
     Authorization:
-      "Bearer BQAx0E4gut-U6m47aE9GGv4fuYbThSI9I8V9ANHVGQe4ukknuRBymxvd92HdSHjKHMy_ZMJVpvGN0ltjFjtooD-uKmS6auAhSJgqNU66JrEcxLe3_pi3cyf1kdMbWIGFSg53EuTym-ytFU-o9YXHTZtEZ3mlFyUH15LAZQsLzJhVM5RWa86afJg_S403kl9YWIkhiw",
+      "Bearer BQC1-UCuuWYDV8Q3Yo16upsJwtUaj1tQmvmO07GSHPf-Au-K8e8HNtRUa4GttMWxKmvj_TNkjhOb3gCegZw5ARYkk_bA3jztkxcM60kG2TMvnUyC5tWvw2kofObXWnAb75-TSYo4iQLN6gi0fzC808Utm5p0_2_v4AaonDhIGzZIgi1cR5IGsGmD6t0h8NKg-taY5Q",
     Accept: "application/json",
     "Content-Type": "application/json",
   },
@@ -22,16 +22,21 @@ function getCategories() {
       console.log(data);
       drawCategories(data);
     })
-    .catch((error) => console.log(`[getCategory] Error petición  ${error.message}`));
+    .catch((error) =>
+      console.log(`[getCategory] Error petición  ${error.message}`)
+    );
 }
 
 function getCategory(id) {
   const category = getData(`browse/categories/${id}/playlists`);
-  category.then((data) => {
-    console.log(`[getCategory] Category id: ${id}`);
-    drawCategory(data);
-  })
-  .catch(error => console.error(`[getCategory] Error petición ${error.message}`));
+  category
+    .then((data) => {
+      console.log(`[getCategory] Category id: ${id}`);
+      drawCategory(data);
+    })
+    .catch((error) =>
+      console.error(`[getCategory] Error petición ${error.message}`)
+    );
 }
 
 function getArtists(param) {
@@ -40,4 +45,17 @@ function getArtists(param) {
   } else {
     alert("Introduce un valor correcto.");
   }
+}
+
+function getPlaylists() {
+  const playlists = getData("browse/featured-playlists?limit=20");
+  playlists
+    .then((data) => {
+      console.info("[getPlaylists] Data OK.");
+      console.log(data);
+      drawPlaylists(data);
+    })
+    .catch((error) =>
+      console.log(`[getPlaylists] Error petición  ${error.message}`)
+    );
 }

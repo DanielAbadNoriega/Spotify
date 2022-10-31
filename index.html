@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="src/css/main.css">
   <script src="./src/lib/fontawesome/js/all.js"></script>
   <script src="./src/js/components/categories.js"></script>
+  <script src="./src/js/components/playlists.js"></script>
   <script src="./src/js/spotify-api/SpotifyApp.js"></script>
   <script src="./src/js/components/home.js"></script>
   <title>Spotify DAN</title>
@@ -25,11 +26,18 @@
   </nav>
   <main>
     <h1>Spotify</h1>
-    <section class="categories-section" id="home-categories">
+    <section class="section" id="home-categories">
       <h2>Categories</h2>
-      <div class="container-categories">
+      <div class="container container-categories">
       </div>
-      <button id="more-categories" onclick="location.href='components/categories.html'">...</button>
+      <button id="more" class="more-categories" onclick="location.href='components/categories.html'">...</button>
+    </section>
+
+    <section class="section" id="home-playlists">
+      <h2>Playlists</h2>
+      <div class="container container-playlists">
+      </div>
+      <button id="more"  class="more-playlists" onclick="location.href='components/playlists.html'">...</button>
     </section>
   </main>
 </body>
