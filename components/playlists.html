@@ -26,11 +26,23 @@
   </nav>
   <main>
     <h1>Playlists</h1>
-    <section class="section playlists-section" id="playlists">
-      <div class="container container-playlists">
-      </div>
-    </section>
-  </main>
+    <div class="playlists-component-container">
+
+      <section class="section" id="playlists">
+        <div class="container container-playlists">
+        </div>
+      </section>
+
+      <!-- Playlists Description -->
+      <article class="playlist-description">
+        <button onclick="closeCard()"><i class="fa-solid fa-xmark"></i></button>
+        <h3 class="card-title"></h3>
+        <img class="card-img">
+        <hr>
+        <p class="card-description"></p>
+        <button class="card-button"><a class="card-link" target="_blank">Listen me</a></button>
+      </article>
+    </div>
 </body>
 
 </html>

@@ -1,21 +1,44 @@
-.home-container-playlists{
+.home-container-playlists, .playlists-component-container {
   display: flex;
   align-items: center;
+  margin-top: 20vh;
 }
 
-#home-playlists{
+#home-playlists, #playlists {
   margin: 0;
   margin-left: 6vw;
   bottom: 0;
 }
 
-.playlist-description{
+.playlist-description {
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   position: absolute;
-  left: 20vw;
+  right: -100vw;
   height: 75vh;
+  min-width: 30%;
   text-align: center;
+  transition: right 1s;
+}
+
+.playlist-description button:nth-child(1){
+  margin: 5px;
+  height: 25px;
+  width: 40px;
+  float: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.playlist-description h3 {
+  float: none;
+  margin: 2vh 0;
+}
+
+.playlist-description hr {
+  margin: 1vh auto;
+  width: 90%;
 }
 
 .playlist-description img {
@@ -23,4 +46,28 @@
   border-radius: 16px;
   width: 275px;
   height: 275px;
+}
+
+.playlist-description p{
+  margin: 0 auto;
+  padding: 10px;
+  width: 90%;
+  text-align: justify;
+}
+
+.card-button {
+  height: 52px;
+  width: 80px;
+  padding: 0 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1.6px);
+  background: linear-gradient(to right, #12fff7, #b3ffab);
+  background: -webkit-linear-gradient(to right, #12fff7, #b3ffab);
+}
+
+.card-button a {
+  text-decoration: none;
+  color: black;
 }

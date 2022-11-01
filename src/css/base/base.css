@@ -7,10 +7,10 @@ body {
     #00bf72,
     #a8eb12
   );
-  background-size: 400% 400%;
-  /*   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; */
+  background-size: 400% 400%;
+  background-position: center;
+  background-attachment: fixed;
   -webkit-animation: gradient 30s ease infinite;
   -moz-animation: gradient 30s ease infinite;
   animation: gradient 30s ease infinite;

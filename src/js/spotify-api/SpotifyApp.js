@@ -1,6 +1,6 @@
 const SPOTIFY_URL = "https://api.spotify.com/v1/";
 const token =
-  "BQAbx0O3xMs587J3XQLhKzSDrPUipqKYYQxeRaOkzNWykks12-Dzw_PZk0UeUPGIRdtECRt-D4jwzhrCkTzzroZTDd_v_DgI0MaUJs0Y7kweesFpaAOWekbrDQQVkP_EgUda8vHWS0BOpDWYeQMKBHlKweANX65rYTT2HAsvpg7IT4JzVURaCsqCfpR9MjuG5JQ2Ag";
+  "BQCUhA3bdkoywmBWGhmlYMyoCg-liNiAxWaTj-YiyKhoTm2lRBsUKTTffRCUstIc52d2a-M6jyf1nkm1kF-Hfvr2zbagXLTrxsRlgQd-pMe0mPZlw67lJeSHcpWgvxw0OUQ7WugZKH8Jzx3MZhPlmq2CLTJnwSEowXDkn20GFyW9FbzvbP3jDyXOzb_HbfBK8dL-qA";
 const options = {
   method: "GET",
   headers: {

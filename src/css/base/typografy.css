@@ -1,10 +1,14 @@
 /* Font Family */
 
-h1{
+/* Escala tipográfica */
+h1 {
   font-size: var(--text-jumbo);
 }
 
-h2{
+h2 {
   font-size: var(--text-headline);
 }
-/* Escala tipográfica */
+
+h3 {
+  font-size: var(--text-title);
+}

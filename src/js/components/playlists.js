@@ -30,20 +30,23 @@ function cardPlaylists(playlist) {
 
 function cardDescription(id) {
   let playlist = playlistsArr.find((playlist) => playlist.id == id);
-  let cardDescrition = document.getElementsByClassName(
+  let cardDescription = document.getElementsByClassName(
     "playlist-description"
   )[0];
-  let title = document.getElementsByClassName("playlist-description")[0]
-    .children[0];
-  let portrait = document.getElementsByClassName("playlist-description")[0]
-    .children[1];
-  let description = document.getElementsByClassName("playlist-description")[0]
-    .children[2];
-  let tracks = document.getElementsByClassName("playlist-description")[0]
-    .children[3];
+  let title = document.getElementsByClassName("card-title")[0];
+  let portrait = document.getElementsByClassName("card-img")[0];
+  let description = document.getElementsByClassName("card-description")[0];
+  let tracks = document.getElementsByClassName("card-link")[0];
   title.innerHTML = `${playlist.name}`;
   portrait.setAttribute("src", playlist.images[0].url);
   description.innerHTML = `${playlist.description}`;
   tracks.setAttribute("href", playlist.external_urls.spotify);
-/*   tracks.setAttribute("onclick", `playlistTracks('${playlist.id}')`) */
+  cardDescription.style.right= "2vw";
+}
+
+function closeCard(){
+  let cardDescription = document.getElementsByClassName(
+    "playlist-description"
+  )[0];
+  cardDescription.style.right = "-100vw";
 }
