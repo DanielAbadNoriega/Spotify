@@ -1,6 +1,6 @@
 const SPOTIFY_URL = "https://api.spotify.com/v1/";
 const token =
-  "BQCUhA3bdkoywmBWGhmlYMyoCg-liNiAxWaTj-YiyKhoTm2lRBsUKTTffRCUstIc52d2a-M6jyf1nkm1kF-Hfvr2zbagXLTrxsRlgQd-pMe0mPZlw67lJeSHcpWgvxw0OUQ7WugZKH8Jzx3MZhPlmq2CLTJnwSEowXDkn20GFyW9FbzvbP3jDyXOzb_HbfBK8dL-qA";
+  "BQCj2UprehHcCP54RecDFeYvffgGCeSbfdxwjC9gH7ZFu8D32mR_crZuwoNYqvrLmq0wlg6JIywatBJjUAj6WEoeVlHjvjyHX1QyWpeSV_EeupE0feE68DSVMt2wAxUSCU0_rFZGY_SYEZSAB_IMMno1zLeDM59paVx-DYo3bVWOPsy8BtvAGEBWl34kLcmTVQ9zCw";
 const options = {
   method: "GET",
   headers: {
@@ -9,6 +9,7 @@ const options = {
     "Content-Type": "application/json",
   },
 };
+var items = {};
 
 async function getData(param) {
   const res = await fetch(`${SPOTIFY_URL}${param}`, options);
@@ -21,7 +22,8 @@ function getCategories() {
     .then((data) => {
       console.info("[getCategories] Data OK.");
       console.log(data);
-      drawCategories(data);
+      items['categories'] = data.categories.items;
+      drawCategories(items.categories);
     })
     .catch((error) =>
       console.log(`[getCategory] Error petición  ${error.message}`)
@@ -54,7 +56,8 @@ function getPlaylists() {
     .then((data) => {
       console.info("[getPlaylists] Data OK.");
       console.log(data);
-      drawPlaylists(data);
+      items['playlists']= data.playlists.items;
+      drawPlaylists(items.playlists);
     })
     .catch((error) =>
       console.log(`[getPlaylists] Error petición  ${error.message}`)
