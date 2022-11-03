@@ -1,11 +1,28 @@
-.home-container-playlist, .playlists-component-container {
+.home-container-playlists, .playlists-component-container {
   display: flex;
   align-items: center;
   margin-top: 20vh;
+  height: 100vh;
 }
 
 #home-playlists, #playlists {
   margin: 0;
   margin-left: 6vw;
   bottom: 0;
+}
+
+#home-playlists{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-playlists{
+  height: 100vh;
+  align-content: center;
+}
+
+.playlist-card{
+  position: absolute;
+  right: -100vh;
 }

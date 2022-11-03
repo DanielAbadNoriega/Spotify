@@ -1,6 +1,6 @@
 const SPOTIFY_URL = "https://api.spotify.com/v1/";
 const token =
-  "BQCj2UprehHcCP54RecDFeYvffgGCeSbfdxwjC9gH7ZFu8D32mR_crZuwoNYqvrLmq0wlg6JIywatBJjUAj6WEoeVlHjvjyHX1QyWpeSV_EeupE0feE68DSVMt2wAxUSCU0_rFZGY_SYEZSAB_IMMno1zLeDM59paVx-DYo3bVWOPsy8BtvAGEBWl34kLcmTVQ9zCw";
+  "BQBOHZdxZfM6DobLCpGBC0erQsKdyFMV43ojeZVTMaAcZytBmNCXpNERC1GaeC2R70TVBo3s2Z4CBTFhgVK4R1iyD5_Zqs_rCprTDuHQ4x4QQhGkJLyR8S9Pw-F-l9LmGbVQjgnHaGjVSLmruDzg8Wcc4ARB0xKk6p8imoSfsZXMAQInTfipX3vilzlmccwPCKaGoQ";
 const options = {
   method: "GET",
   headers: {
@@ -30,12 +30,14 @@ function getCategories() {
     );
 }
 
-function getCategory(id) {
-  const category = getData(`browse/categories/${id}/playlists`);
-  category
+function getCategoryPlaylists(id) {
+  const categoryPlaylists = getData(`browse/categories/${id}/playlists`);
+  categoryPlaylists
     .then((data) => {
       console.log(`[getCategory] Category id: ${id}`);
-      drawCategory(data);
+      let category = items.categories.filter(category => category.id == id);
+      category[0]['playlists'] = data.playlists.items;
+      drawCategory(category[0]);
     })
     .catch((error) =>
       console.error(`[getCategory] Error petición ${error.message}`)

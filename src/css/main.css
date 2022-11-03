@@ -13,6 +13,7 @@
 /* sections */
 @import url("./sections/section.css");
 @import url("./sections/playlists-section.css");
+@import url("./sections/categories-section.css");
 
 /* Variables */
 @import url("./variables/v-colors.css");

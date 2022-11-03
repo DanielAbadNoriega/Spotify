@@ -1,8 +1,8 @@
 .card-description {
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.9);
-  position: absolute;
-  right: -100vw;
+/*   position: absolute;
+  right: -100vw; */
   height: 75vh;
   min-width: 30%;
   text-align: center;

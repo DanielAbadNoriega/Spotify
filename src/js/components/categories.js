@@ -17,13 +17,22 @@ function cardCategory(category) {
   let name = category.name.split(" ").join("");
   let categories = document.getElementsByClassName("container-categories")[0];
   let card = document.createElement("div");
-  card.setAttribute("onclick", `getCategory('${category.id}')`);
+  card.setAttribute("onclick", `getCategoryPlaylists('${category.id}')`);
   card.classList.add(`${name}`);
-  card.setAttribute("id", category.id);
   card.style.backgroundImage = `url(${category.icons[0].url})`;
   categories.appendChild(card);
 }
 
-function drawCategory(elem) {
-  console.log(elem);
+function drawCategory(category) {
+  let obj = {
+    name: "category",
+    arr: "categories-arr",
+    id: category.id,
+  };
+  console.log(category);
+  category.playlists.forEach((playlist, index) => {
+    obj["playlist"] = playlist;
+    obj["index"] = index;
+    createArticle(obj);
+  });
 }
