@@ -30,9 +30,12 @@ function drawCategory(category) {
     id: category.id,
   };
   console.log(category);
-  category.playlists.forEach((playlist, index) => {
-    obj["playlist"] = playlist;
-    obj["index"] = index;
-    createArticle(obj);
+  let playlists = category.playlists.filter( playlist => playlist !== null);
+  playlists.forEach((playlist, index) => {
+    if (playlist !== null) {
+      obj["playlist"] = playlist;
+      obj["index"] = index;
+      createArticle(obj);
+    } 
   });
 }

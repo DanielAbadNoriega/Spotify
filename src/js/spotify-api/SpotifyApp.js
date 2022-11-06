@@ -1,6 +1,6 @@
 const SPOTIFY_URL = "https://api.spotify.com/v1/";
 const token =
-  "BQBOHZdxZfM6DobLCpGBC0erQsKdyFMV43ojeZVTMaAcZytBmNCXpNERC1GaeC2R70TVBo3s2Z4CBTFhgVK4R1iyD5_Zqs_rCprTDuHQ4x4QQhGkJLyR8S9Pw-F-l9LmGbVQjgnHaGjVSLmruDzg8Wcc4ARB0xKk6p8imoSfsZXMAQInTfipX3vilzlmccwPCKaGoQ";
+  "BQDvw-mhYX1g03hAtDM86gfOSEtiO_IRlNu6e75KCfmINdbchxUoYQwzBSd-MgCI_WUqJBtoln-4f8ejOHVHrSCWI56yilGpmqVVcJss9PYqZPP512lyQfjLCwWtyPFVCy_udolsM78JDYa_KhZdsuu8uTwe8gP7aJHpQUw2-IvmSOjYYR3N07jOTy2NlevpHZ5E_w";
 const options = {
   method: "GET",
   headers: {
@@ -40,7 +40,7 @@ function getCategoryPlaylists(id) {
       drawCategory(category[0]);
     })
     .catch((error) =>
-      console.error(`[getCategory] Error petición ${error.message}`)
+      console.error(`[getCategory] Error petición : ${error.message}`)
     );
 }
 
@@ -58,7 +58,8 @@ function getPlaylists() {
     .then((data) => {
       console.info("[getPlaylists] Data OK.");
       console.log(data);
-      items['playlists']= data.playlists.items;
+      let playlists = data.playlists.items.filter(item => item !== null);
+      items['playlists']= playlists;
       drawPlaylists(items.playlists);
     })
     .catch((error) =>

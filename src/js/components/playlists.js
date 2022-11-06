@@ -17,7 +17,6 @@ function cardPlaylists(playlist) {
   let name = playlist.name.split(" ").join("");
   let playlists = document.getElementsByClassName("container-playlists")[0];
   let card = document.createElement("div");
-  /*   card.addEventListener("click", getCategory(category.id)); */
   let obj = {
     'name': 'playlist',
     'arr': 'playlists',
