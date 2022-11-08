@@ -52,12 +52,11 @@ function checkCategory(item, container) {
     }
   }
   setTimeout(() => (container.style.right = "0px"), 200);
-  if (document.getElementById(`${item.playlist.id}-${item.index}`) == undefined) {
-/*     setTimeout(function () {
-      newArticle(item, container);
-      cardDescriptionCategory(item);
-    }, 300); */
-    newArticle(item, container);
+  if (
+    document.getElementById(`${item.playlist.id}-${item.index}`) == undefined
+  ) {
+    let containerCategoriesPlaylists = document.getElementsByClassName("home-container-categories-playlists")[0]; 
+    newArticle(item, containerCategoriesPlaylists);
     cardDescriptionCategory(item);
   }
 }
